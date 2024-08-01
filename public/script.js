@@ -9,12 +9,6 @@ const board = [
 
 let currentPlayer = 'X';
 
-// Load images
-const xImage = new Image();
-xImage.src = 'x.png'; // Ensure you have an x.png file in your public directory
-const oImage = new Image();
-oImage.src = 'o.png'; // Ensure you have an o.png file in your public directory
-
 // Draw the grid
 function drawGrid() {
     context.lineWidth = 2;
@@ -39,11 +33,8 @@ function drawGrid() {
 
 // Draw X or O
 function drawSymbol(x, y, player) {
-    if (player === 'X') {
-        context.drawImage(xImage, x * 100, y * 100, 100, 100);
-    } else if (player === 'O') {
-        context.drawImage(oImage, x * 100, y * 100, 100, 100);
-    }
+    context.font = '48px sans-serif';
+    context.fillText(player, x * 100 + 35, y * 100 + 65);
 }
 
 // Check for a win or draw
