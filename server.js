@@ -9,5 +9,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://Devon's Tic-Tac-Toe:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
